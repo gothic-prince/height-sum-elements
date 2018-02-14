@@ -7,6 +7,9 @@ const getHeightSumElements = (columns, prop) => {
   const heights = columns.map((column) => {
     return column[prop]
   })
+  if (heights.length === 0) {
+    return 0
+  }
   return heights.reduce((prev, cur) => prev + cur)
 }
 /**

@@ -38,6 +38,12 @@ describe('getScrollHeightSumElements', () => {
     expect(getScrollHeightSumElements(scopes)).toBe(400)
   })
 })
+describe('getScrollHeightSumElements', () => {
+  const scopes = []
+  it('should return 0', () => {
+    expect(getScrollHeightSumElements(scopes)).toBe(0)
+  })
+})
 describe('nodeListToArrayElement', () => {
   document.body.innerHTML = `
     <div id="block">

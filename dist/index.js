@@ -12,6 +12,9 @@ var getHeightSumElements = function getHeightSumElements(columns, prop) {
   var heights = columns.map(function (column) {
     return column[prop];
   });
+  if (heights.length === 0) {
+    return 0;
+  }
   return heights.reduce(function (prev, cur) {
     return prev + cur;
   });
